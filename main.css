@@ -105,7 +105,31 @@ a {
 
 .main{
     background-color: #090909;
-    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-menu_list{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 128px;
+    grid-row-gap: 172px;
+    padding: 100px 0px;
+}
+
+.main-menu_list-item{
+    transition: transform 0.2s ease-in;
+}
+
+.main-menu_list-item>img{
+    width: 300px;
+}
+
+.main-title{
+    text-align: center;
+    padding: 50px 0px;
+    font-size: 52px;
 }
 
 /* Animation */
@@ -117,7 +141,8 @@ a {
 }
 
 .nav-content_text:hover,
-.nav-content_title:hover {
+.nav-content_title:hover,
+.main-menu_list-item:hover {
     transform: scale(1.2);
 }
 
