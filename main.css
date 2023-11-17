@@ -135,8 +135,6 @@ a {
 .main-menu_list-item>img {
     width: 100%;
     max-width: 300px;
-    display:none;
-
 }
 
 .main-title {
@@ -196,6 +194,22 @@ a {
     text-align: center;
     padding: 50px;
 }
+
+/* Car page */
+
+.nav-car{
+    background-color: #070707;
+}
+
+.menu-list_car{
+    justify-content: center;
+    align-items: center;
+}
+
+.main-car {
+    background-color: #090909;
+}
+
 
 /* Animation */
 
