@@ -113,18 +113,23 @@ a {
 .main-menu_list{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 128px;
-    grid-row-gap: 172px;
+    grid-column-gap: 68px;
+    grid-row-gap: 78px;
     padding: 100px 0px;
+    max-width: 1200px;
 }
 
 .main-menu_list-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     transition: transform 0.2s ease-in;
 }
 
 .main-menu_list-item>img{
-    width: 300px;
-}
+    width: 100%;
+    max-width: 300px; }
 
 .main-title{
     text-align: center;
@@ -179,3 +184,4 @@ a {
         opacity: 100%;
     }
 }
+
