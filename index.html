@@ -8,11 +8,11 @@
 </head>
 
 <body>
-    <header class="header">
+    <header id="main" class="header">
         <div class="container">
             <nav class="nav">
                 <ul class="menu-list">
-                    <li class="menu-list_item"><a href="#" class="menu-list_item-link">Main</a></li>
+                    <li class="menu-list_item"><a href="#main" class="menu-list_item-link">Main</a></li>
                     <li class="menu-list_item"><a href="#cars" class="menu-list_item-link">Cars</a></li>
                     <li class="menu-list_item"><a href="#about-us" class="menu-list_item-link">About us</a></li>
                 </ul>
@@ -93,10 +93,14 @@
                 <hr class="header-line">
                 <h1 class="main-title">About us</h1>
                 <div class="about-us_content">
-                    <div class="about-us_content-carousel">
-                        <img src="./img/carousel/mercedes.png" alt="Car 1">
-                        <img src="./img/carousel/camaro.png" alt="Car 2">
-                        <img src="./img/carousel/bmw.png" alt="Car 3">
+                    <div class="about-us_content-carousel" id="slider">
+                        <img src="./img/carousel/mercedes.png" alt="Car 1" class="fade">
+                        <img src="./img/carousel/camaro.png" alt="Car 2" class="fade">
+                        <img src="./img/carousel/bmw.png" alt="Car 3" class="fade">
+                        <img src="./img/carousel/gtr.jpg" alt="Car 4" class="fade">
+                        <img src="./img/carousel/r8.png" alt="Car 5" class="fade">
+                        <img src="./img/carousel/a4.png" alt="Car 6" class="fade">                       
+                        <img src="./img/carousel/aventador.png" alt="Car 7" class="fade">
                     </div>
                     <div class="about-us_content-text">
                         <p class="about-us_text">
@@ -115,7 +119,8 @@
     </main>
     <footer class="footer">
         <div class="container">
-
+            <hr class="header-line">
+            <p class="footer-title">Copyright by RateCar company.</p>
         </div>
     </footer>
     <script src="./app.js"></script>

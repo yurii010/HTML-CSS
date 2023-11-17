@@ -17,6 +17,7 @@ body {
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: normal;
     color: white;
+    scroll-behavior: smooth;
 }
 
 li,
@@ -33,6 +34,10 @@ a {
 .container {
     max-width: 1300px;
     margin: auto;
+}
+
+.none{
+    display:none;
 }
 
 /* Nav & Header */
@@ -130,6 +135,8 @@ a {
 .main-menu_list-item>img {
     width: 100%;
     max-width: 300px;
+    display:none;
+
 }
 
 .main-title {
@@ -167,10 +174,27 @@ a {
 .about-us_content-carousel{
     max-width: 1000px;
     padding-bottom: 100px;
+    position: relative;
 }
 
 .about-us_content-carousel>img{
     width: 100%;
+    box-shadow: 0 0 20px #e93b32;
+}
+
+.fade {
+    animation: fade 5s ease-in-out infinite;
+  }
+
+/* Footer */
+
+.footer{
+    background-color: #070707;
+}
+
+.footer-title{
+    text-align: center;
+    padding: 50px;
 }
 
 /* Animation */
@@ -230,3 +254,13 @@ a {
         opacity: 100%;
     }
 }
+  
+  @keyframes fade {
+    0%, 100% {
+      opacity: 0;
+    }
+    20%, 80% {
+      opacity: 1;
+    }
+  }
+  
