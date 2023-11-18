@@ -198,9 +198,3 @@ a {
         width: 300px;
     }
 }
-
-@media(max-width:620px) {
-    .car-details_content img {
-        max-width: 150px;
-    }
-}
