@@ -1,0 +1,186 @@
+/* General */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*,
+*::after,
+*::before {
+    padding: 0px;
+    margin: 0px;
+}
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: normal;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+li,
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* Nav & Header */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 98px;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 70px;
+}
+
+.menu-list_item {
+    font-size: 24px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid white;
+    opacity: 1;
+    transition: color 0.2s ease-in, transform 0.2s ease-in, border 0.2s ease-in;
+}
+
+.header-line {
+    background-color: #fff;
+}
+
+/* Car page */
+
+.nav-car {
+    background-color: #070707;
+}
+
+.main-car {
+    background-color: #090909;
+}
+
+.main-title{
+    margin-top: 50px;
+}
+
+#car-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.car-details_content {
+    text-align: center;
+}
+
+.car-details_content img {
+    max-width: 600px;
+    height: 100%;
+    transition: transform 0.2s ease-in;
+}
+
+.car-details_content h2 {
+    font-size: 28px;
+    padding-bottom: 50px;
+}
+
+.car-details_content p {
+    font-size: 22px;
+    padding-bottom: 50px;
+    text-align: center;
+    line-height: 30px;
+}
+
+/* Comments */
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px;
+}
+
+.comment {
+    width: 400px;
+    padding-bottom: 20px;
+}
+
+.comment-title {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#name {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+#comment-text {
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    line-height: 25px;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #070707;
+}
+
+.footer-title {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Animation */
+
+.menu-list_item:hover {
+    color: #e0655e;
+    transform: scale(1.1);
+    border: 1px solid #e93b32;
+}
+
+.car-details_content img:hover {
+    transform: scale(1.2);
+}
+
+@media(max-width:1100px) {
+
+    .hidden-text {
+        font-size: 32px;
+    }
+
+    .main-menu_list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .menu-list_item {
+        margin: 50px 0px;
+        font-size: 36px;
+    }
+
+    .footer-title {
+        font-size: 28px;
+    }
+}
