@@ -210,6 +210,64 @@ a {
     background-color: #090909;
 }
 
+#car-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.car-details_content{
+    text-align: center;
+}
+
+.car-details_content img{
+    max-width: 600px;
+    height: 100%;
+    transition: transform 0.2s ease-in;
+}
+
+.car-details_content h2{
+    font-size: 28px;
+    padding-bottom: 50px;
+}
+
+.car-details_content p{
+    font-size: 22px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+/* Comments */
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px;
+}
+
+.comment{
+    width: 400px;
+    padding-bottom: 20px;
+}
+
+.comment-title{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#name{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+#comment-text{
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    line-height: 25px;
+}
 
 /* Animation */
 
@@ -221,7 +279,8 @@ a {
 
 .nav-content_text:hover,
 .nav-content_title:hover,
-.main-menu_list-item:hover {
+.main-menu_list-item:hover,
+.car-details_content img:hover {
     transform: scale(1.2);
 }
 
