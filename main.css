@@ -361,8 +361,16 @@ a {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .main-menu_list-item>img {
+        max-width: 500px;
+    }
+
     .about-us_content-carousel {
         max-width: 700px;
+    }
+
+    .car-details_content img {
+        max-width: 500px;
     }
 
     .menu-list_item {
