@@ -377,12 +377,4 @@ a {
     .footer-title {
         font-size: 28px;
     }
-
-    .menu-list_car {
-        margin-bottom: 50px;
-    }
-}
-
-@media (max-width: 1100px) {
-    
 }
