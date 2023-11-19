@@ -48,3 +48,24 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
     }
 });
+
+// Виведення коментарів
+
+fetch('./comments.json')
+    .then(response => response.json())
+    .then(comments => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const carId = urlParams.get('id');
+        const carComments = comments.filter(comment => comment.carId === parseInt(carId));
+
+        carComments.forEach(item => {
+            let newCom = document.createElement('div');
+            let commentsContainer = document.querySelector(".comments");
+            newCom.classList.add('comment');
+            newCom.innerHTML = `
+                <p id="name">${item.name}</p>
+                <p id="comment-text">${item.comments}</p>
+            `;
+            commentsContainer.appendChild(newCom);
+        });
+    });

@@ -1,0 +1,164 @@
+[
+    {
+        "id": 1,
+        "carId": 1,
+        "name": "John",
+        "comments": "Comfortable and stylish design."
+    },
+    {
+        "id": 2,
+        "carId": 1,
+        "name": "Emma",
+        "comments": "Impressive 600 hp from the twin-turbocharged V8 engine."
+    },
+    {
+        "id": 3,
+        "carId": 1,
+        "name": "Alex",
+        "comments": "Muscle car with incredible power."
+    },
+    {
+        "id": 4,
+        "carId": 2,
+        "name": "James",
+        "comments": "High-performance luxury sedan."
+    },
+    {
+        "id": 5,
+        "carId": 2,
+        "name": "Ava",
+        "comments": "Luxurious interior with advanced technology."
+    },
+    {
+        "id": 6,
+        "carId": 2,
+        "name": "Ethan",
+        "comments": "Impressive 625 hp from the twin-turbocharged V8."
+    },
+    {
+        "id": 7,
+        "carId": 3,
+        "name": "Mia",
+        "comments": "Competitive pricing in the market."
+    },
+    {
+        "id": 8,
+        "carId": 3,
+        "name": "Liam",
+        "comments": "Dynamic driving experience with precise handling."
+    },
+    {
+        "id": 9,
+        "carId": 3,
+        "name": "Isabella",
+        "comments": "Iconic American sports car with a sleek design."
+    },
+    {
+        "id": 10,
+        "carId": 4,
+        "name": "Jackson",
+        "comments": "Luxurious interior with advanced technology."
+    },
+    {
+        "id": 11,
+        "carId": 4,
+        "name": "Sophie",
+        "comments": "Impressive 625 hp from the twin-turbocharged V8."
+    },
+    {
+        "id": 12,
+        "carId": 4,
+        "name": "Landon",
+        "comments": "Dynamic driving experience with precise handling."
+    },
+    {
+        "id": 13,
+        "carId": 5,
+        "name": "Scarlett",
+        "comments": "Iconic American sports car with a sleek design."
+    },
+    {
+        "id": 14,
+        "carId": 5,
+        "name": "Henry",
+        "comments": "Powerful V8 engine for a thrilling performance."
+    },
+    {
+        "id": 15,
+        "carId": 5,
+        "name": "Aria",
+        "comments": "Excellent handling and cornering capabilities."
+    },
+    {
+        "id": 16,
+        "carId": 6,
+        "name": "Lucas",
+        "comments": "Elegant and comfortable interior."
+    },
+    {
+        "id": 17,
+        "carId": 6,
+        "name": "Lily",
+        "comments": "Powerful V8 engine for a balanced performance."
+    },
+    {
+        "id": 18,
+        "carId": 6,
+        "name": "Mason",
+        "comments": "Advanced safety features for a secure ride."
+    },
+    {
+        "id": 19,
+        "carId": 7,
+        "name": "Evelyn",
+        "comments": "Exotic hypercar with a limited production run."
+    },
+    {
+        "id": 20,
+        "carId": 7,
+        "name": "Noah",
+        "comments": "Incredible performance from the AMG V12 engine."
+    },
+    {
+        "id": 21,
+        "carId": 7,
+        "name": "Harper",
+        "comments": "Breathtaking design and aerodynamics."
+    },
+    {
+        "id": 22,
+        "carId": 8,
+        "name": "Amelia",
+        "comments": "Iconic sports car with a timeless design."
+    },
+    {
+        "id": 23,
+        "carId": 8,
+        "name": "Benjamin",
+        "comments": "Responsive handling and precise steering."
+    },
+    {
+        "id": 24,
+        "carId": 8,
+        "name": "Chloe",
+        "comments": "Powerful V6 engine delivering thrilling performance."
+    },
+    {
+        "id": 25,
+        "carId": 9,
+        "name": "Elijah",
+        "comments": "Exotic Italian supercar with a striking design."
+    },
+    {
+        "id": 26,
+        "carId": 9,
+        "name": "Mila",
+        "comments": "Powerful V12 engine delivering breathtaking performance."
+    },
+    {
+        "id": 27,
+        "carId": 9,
+        "name": "Liam",
+        "comments": "Luxurious interior with advanced technology."
+    }
+]
