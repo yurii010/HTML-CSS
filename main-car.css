@@ -94,7 +94,6 @@ a {
 
 .car-details_content img {
     max-width: 600px;
-    height: 100%;
     transition: transform 0.2s ease-in;
 }
 
@@ -185,7 +184,7 @@ a {
     }
 
     .car-details_content img {
-        max-width: 300px;
+        max-width: 320px;
     }
 
     .footer-title {
