@@ -44,7 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
         let h2Element = document.createElement('h2');
         h2Element.textContent = car.name;
         let pElement = document.createElement('p');
+        // треба пофіксити
         pElement.textContent = `Model: ${car.model}, Engine: ${car.engine}, Power: ${car.power}, Year: ${car.year}, Price: ${car.price}`;
+        //
         carDetailsContent.appendChild(imageElement);
         carDetailsContent.appendChild(h2Element);
         carDetailsContent.appendChild(pElement);
@@ -73,3 +75,17 @@ fetch('./comments.json')
             newCom.appendChild(commentElement);
         });
     });
+
+document.querySelector('.submit').addEventListener('click', function(){
+    let commentName = document.querySelector('.form-name').value;
+    let commentText = document.querySelector('.form-comment').value;
+    const urlParams = new URLSearchParams(window.location.search);
+    const carId = urlParams.get('id');
+    const dataToWrite = {"carId": carId, "name": commentName, "comments": commentText};
+    const jsonData = JSON.stringify(dataToWrite, null, 2);
+    console.log(dataToWrite);
+    console.log(jsonData);
+    commentName = "";
+    commentText = "";
+})
+
