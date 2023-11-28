@@ -83,9 +83,9 @@ document.querySelector('.submit').addEventListener('click', function(){
     const carId = urlParams.get('id');
     const dataToWrite = {"carId": carId, "name": commentName, "comments": commentText};
     const jsonData = JSON.stringify(dataToWrite, null, 2);
-    console.log(dataToWrite);
     console.log(jsonData);
     commentName = "";
     commentText = "";
+    const blob = new Blob([jsonData], { type: "application/json" });
 })
 
