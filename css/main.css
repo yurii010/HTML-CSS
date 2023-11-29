@@ -44,7 +44,7 @@ a {
 
 .header {
     min-height: 600px;
-    background-image: url(./img/background-corvette.jpg);
+    background-image: url(../img/background-corvette.jpg);
     background-size: cover;
     background-position: center;
 }

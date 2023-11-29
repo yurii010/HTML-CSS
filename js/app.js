@@ -1,23 +1,23 @@
 // Демонстраційні фото
-let slideIndex = 0;
-function showSlides() {
-    const slider = document.getElementById("slider");
-    const sliderItems = Array.from(slider.children);
-
-    for (let i = 0; i < sliderItems.length; i++) {
-        sliderItems[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > sliderItems.length) {
-        slideIndex = 1;
-    }
-    sliderItems[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 5000);
-}
-
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function () {
+    let slideIndex = 0;
     showSlides();
-};
+    function showSlides() {
+        const slider = document.getElementById("slider");
+        if (slider) {
+            const sliderItems = Array.from(slider.children);
+            for (let i = 0; i < sliderItems.length; i++) {
+                sliderItems[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > sliderItems.length) {
+                slideIndex = 1;
+            }
+            sliderItems[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000);
+        }
+    }
+});
 
 // Загрузка машин по вибору користувача
 document.addEventListener('DOMContentLoaded', function () {
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Виведення коментарів
-fetch('./comments.json')
+fetch('../json/comments.json')
     .then(response => response.json())
     .then(comments => {
         const urlParams = new URLSearchParams(window.location.search);
@@ -82,15 +82,28 @@ document.addEventListener('DOMContentLoaded', function () {
         let commentText = document.querySelector('.form-comment').value;
         const urlParams = new URLSearchParams(window.location.search);
         const carId = urlParams.get('id');
-        const dataToWrite = { "carId": carId, "name": commentName, "comments": commentText };
-        let jsonse = JSON.stringify(dataToWrite);
-        let blob = new Blob([jsonse], { type: "application/json" });
-        let url = URL.createObjectURL(blob);
-        let a = document.createElement('a');
-        a.href = url;
-        a.download = "backup.json";
-        a.textContent = "Download backup.json";
-        document.getElementById('json').appendChild(a);
+        fetch('../json/backup.json')
+            .then(response => response.json())
+            .then(existingData => {
+                const existingComments = existingData || [];
+                const maxId = existingComments.length > 0
+                    ? Math.max(...existingComments.map(comment => comment.id))
+                    : 0;
+                const newComment = {
+                    "id": maxId + 1,
+                    "carId": parseInt(carId),
+                    "name": commentName,
+                    "comments": commentText
+                };
+                let jsonse = JSON.stringify(newComment);
+                let blob = new Blob([jsonse], { type: "application/json" });
+                let url = URL.createObjectURL(blob);
+                let a = document.createElement('a');
+                a.href = url;
+                a.download = "backup.json";
+                a.textContent = "Download backup.json";
+                document.getElementById('json').appendChild(a);
+            })
     });
 });
 
