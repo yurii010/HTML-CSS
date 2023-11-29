@@ -76,16 +76,21 @@ fetch('./comments.json')
         });
     });
 
-document.querySelector('.submit').addEventListener('click', function(){
-    let commentName = document.querySelector('.form-name').value;
-    let commentText = document.querySelector('.form-comment').value;
-    const urlParams = new URLSearchParams(window.location.search);
-    const carId = urlParams.get('id');
-    const dataToWrite = {"carId": carId, "name": commentName, "comments": commentText};
-    const jsonData = JSON.stringify(dataToWrite, null, 2);
-    console.log(jsonData);
-    commentName = "";
-    commentText = "";
-    const blob = new Blob([jsonData], { type: "application/json" });
-})
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.submit').addEventListener('click', function () {
+        let commentName = document.querySelector('.form-name').value;
+        let commentText = document.querySelector('.form-comment').value;
+        const urlParams = new URLSearchParams(window.location.search);
+        const carId = urlParams.get('id');
+        const dataToWrite = { "carId": carId, "name": commentName, "comments": commentText };
+        let jsonse = JSON.stringify(dataToWrite);
+        let blob = new Blob([jsonse], { type: "application/json" });
+        let url = URL.createObjectURL(blob);
+        let a = document.createElement('a');
+        a.href = url;
+        a.download = "backup.json";
+        a.textContent = "Download backup.json";
+        document.getElementById('json').appendChild(a);
+    });
+});
 
