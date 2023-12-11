@@ -82,28 +82,19 @@ document.addEventListener('DOMContentLoaded', function () {
         let commentText = document.querySelector('.form-comment').value;
         const urlParams = new URLSearchParams(window.location.search);
         const carId = urlParams.get('id');
-        fetch('../json/backup.json')
+        fetch('http://localhost:3000/comments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                carId: parseInt(carId),
+                name: commentName,
+                comments: commentText,
+            }),
+        })
             .then(response => response.json())
-            .then(existingData => {
-                const existingComments = existingData || [];
-                const maxId = existingComments.length > 0
-                    ? Math.max(...existingComments.map(comment => comment.id))
-                    : 0;
-                const newComment = {
-                    "id": maxId + 1,
-                    "carId": parseInt(carId),
-                    "name": commentName,
-                    "comments": commentText
-                };
-                let jsonse = JSON.stringify(newComment);
-                let blob = new Blob([jsonse], { type: "application/json" });
-                let url = URL.createObjectURL(blob);
-                let a = document.createElement('a');
-                a.href = url;
-                a.download = "backup.json";
-                a.textContent = "Download backup.json";
-                document.getElementById('json').appendChild(a);
-            })
     });
 });
+
 
