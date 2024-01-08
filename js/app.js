@@ -44,9 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
         let h2Element = document.createElement('h2');
         h2Element.textContent = car.name;
         let pElement = document.createElement('p');
-        // треба пофіксити
-        pElement.textContent = `Model: ${car.model}, Engine: ${car.engine}, Power: ${car.power}, Year: ${car.year}, Price: ${car.price}`;
-        //
+        // ??
+        pElement.innerHTML = `${car.model} <br> ${car.engine} <br> ${car.power} <br> ${car.year} <br> ${car.price}`;
         carDetailsContent.appendChild(imageElement);
         carDetailsContent.appendChild(h2Element);
         carDetailsContent.appendChild(pElement);
